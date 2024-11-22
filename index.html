@@ -1,182 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beauty Studio</title>
-  <style>
-    /* Общие стили */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-    }
-    h1, h2, h3 {
-      margin: 0;
-    }
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    /* Шапка */
-    header {
-      background-color: #ff6f61;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    /* Навигация */
-    nav {
-      background-color: #333;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      margin: 0 15px;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ff6f61;
-    }
-
-    /* Hero */
-    .hero {
-      background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-      text-align: center;
-      color: white;
-      padding: 100px 20px;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 20px;
-    }
-
-    /* Галерея */
-    .gallery {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
-      background-color: #f9f9f9;
-    }
-    .gallery img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Отзывы */
-    .reviews {
-      padding: 40px 20px;
-      background-color: #f1f1f1;
-    }
-    .reviews .review {
-      margin-bottom: 20px;
-      border-left: 4px solid #ff6f61;
-      padding-left: 15px;
-      font-style: italic;
-    }
-
-    /* Контакты */
-    .contact {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .contact form {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .contact input, .contact textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .contact button {
-      background-color: #ff6f61;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .contact button:hover {
-      background-color: #e55a50;
-    }
-
-    /* Подвал */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mona Beauty Studio</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: #fff5f7;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #f8c1c6, #f3a0a5);
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+            font-size: 1.5em;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .services {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .services h2 {
+            text-align: center;
+            color: #f8a0a5;
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services li {
+            font-size: 1.2em;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-form {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #f8a0a5;
+        }
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .contact-form input, 
+        .contact-form select, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #f3a0a5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .contact-form button:hover {
+            background: #d98893;
+        }
+        .call-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #f3a0a5;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .call-button:hover {
+            background: #d98893;
+        }
+        footer {
+            background: #f8c1c6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <!-- Шапка -->
-  <header>
-    <h1>Beauty Studio</h1>
-    <p>Your beauty, our passion</p>
-  </header>
 
-  <!-- Навигация -->
-  <nav>
-    <a href="#gallery">Gallery</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+    <h1>Mona Beauty Studio</h1>
+    <p>Luxurious beauty treatments tailored for you</p>
+</header>
 
-  <!-- Hero -->
-  <div class="hero">
-    <h1>Transform Your Look</h1>
-    <p>Discover the best beauty treatments tailored just for you</p>
-  </div>
+<section class="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li><span>Manicure</span><span>$30</span></li>
+        <li><span>Pedicure</span><span>$40</span></li>
+        <li><span>Facial Treatment</span><span>$50</span></li>
+        <li><span>Hair Styling</span><span>$70</span></li>
+        <li><span>Makeup</span><span>$80</span></li>
+    </ul>
+</section>
 
-  <!-- Галерея -->
-  <section id="gallery" class="gallery">
-    <img src="https://via.placeholder.com/300" alt="Work 1">
-    <img src="https://via.placeholder.com/300" alt="Work 2">
-    <img src="https://via.placeholder.com/300" alt="Work 3">
-  </section>
-
-  <!-- Отзывы -->
-  <section id="reviews" class="reviews">
-    <div class="review">"The best beauty studio I've ever visited!" - Jane Doe</div>
-    <div class="review">"Amazing results and great service." - Mary Smith</div>
-    <div class="review">"Highly recommend for anyone looking for professional care." - Anna Lee</div>
-  </section>
-
-  <!-- Контакты -->
-  <section id="contact" class="contact">
+<section class="contact-form">
     <h2>Contact Us</h2>
     <form>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-  <!-- Подвал -->
-  <footer>
-    &copy; 2024 Beauty Studio. All rights reserved.
-  </footer>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="query-type">Type of Request:</label>
+        <select id="query-type" name="query-type" required>
+            <option value="appointment">Appointment</option>
+            <option value="question">Question</option>
+        </select>
+
+        <div id="appointment-details" style="display: none;">
+            <label for="service">Service:</label>
+            <input type="text" id="service" name="service">
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time">
+        </div>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<button class="call-button" onclick="callStudio()">Call Us</button>
+
+<footer>
+    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+    <p>
+        Follow us:
+        <a href="https://instagram.com/yourstudio" target="_blank">Instagram</a>
+        <a href="https://facebook.com/yourstudio" target="_blank">Facebook</a>
+        <a href="https://twitter.com/yourstudio" target="_blank">Twitter</a>
+    </p>
+</footer>
+
+<script>
+    // Toggle appointment details
+    document.getElementById('query-type').addEventListener('change', function () {
+        const appointmentDetails = document.getElementById('appointment-details');
+        if (this.value === 'appointment') {
+            appointmentDetails.style.display = 'block';
+        } else {
+            appointmentDetails.style.display = 'none';
+        }
+    });
+
+    // Call studio function
+    function callStudio() {
+        window.location.href = 'tel:+1234567890';
+    }
+</script>
+
 </body>
 </html>
